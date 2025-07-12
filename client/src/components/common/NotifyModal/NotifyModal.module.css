@@ -1,0 +1,134 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalContent {
+  margin-top: 60px;
+  padding: 20px;
+  min-width: 560px;
+  background-color: var(--black);
+  border-radius: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.4);
+  transition: transform 0.2s ease;
+}
+
+.activeContent {
+  transform: scale(1);
+}
+
+.title {
+  font-size: 36px;
+  color: var(--success);
+}
+
+.error {
+  color: var(--warning);
+}
+
+.message {
+  margin: 50px 0;
+  color: var(--softMint);
+  font-size: 28px;
+}
+
+.modalContent button,
+.modalLink  {
+  min-width: 250px;
+  padding: 5px 20px;
+  border: none;
+  background-color: var(--darkGreen);
+  border-radius: 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  color: var(--softMint);
+  transition: 0.3s;
+}
+
+.modalLink {
+  text-align: center;
+  text-decoration: none;
+}
+
+.modalContent button:hover,
+.modalLink:hover {
+  cursor: pointer;
+  color: var(--darkGreen);
+  background-color: var(--softMint);
+}
+
+.modalControls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 32px;
+  }
+  .message {
+    font-size: 24px;
+  }
+  .modalContent {
+    min-width: 400px;
+  }
+  .modalContent button {
+    font-size: 21px;
+    padding: 5px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .modalContent {
+    min-width: 300px;
+    padding: 15px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .message {
+    font-size: 21px;
+  }
+  .modalContent button {
+    font-size: 18px;
+    padding: 5px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modalContent {
+    min-width: 180px;
+    padding: 10px;
+  }
+  .title {
+    font-size: 21px;
+  }
+  .message {
+    font-size: 18px;
+  }
+  .modalContent button {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}

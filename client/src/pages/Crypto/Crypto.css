@@ -1,0 +1,12 @@
+:root {
+    --black: #070C11;
+    --darkGray: #1E2126;
+    --lightGray: #3C424A;
+    --lightGreen: #6A9C89;
+    --darkGreen: #16423C;
+}
+
+.crypto-info-page{
+    padding: 20px 60px;
+    background-color: var(--darkGray);
+}

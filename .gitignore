@@ -1,0 +1,11 @@
+# Node dependencies
+client/node_modules/
+server/node_modules/
+
+# Environment variable
+server/.env
+!server/.env.example
+
+# VS Code settings
+.vscode/
+

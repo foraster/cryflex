@@ -1,0 +1,58 @@
+.filter {
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+}
+
+.filter li button {
+    padding: 5px 15px;
+    border: none;
+    background: var(--darkGreen);
+    border-radius: 30px;
+    color: var(--softMint);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.filter li button:hover {
+    cursor: pointer;
+    color: var(--darkGreen);
+    background: var(--softMint);
+}
+
+@media (max-width: 1200px) {
+    .filter {
+        padding: 0;
+        padding-top: 10px;
+        padding-left: 15px;
+        max-width: 400px;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    .filter li button {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter {
+        gap: 8px;;
+    }
+    .filter li button {
+        padding: 5px 8px;
+        font-size: 12px;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .filter li button {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}

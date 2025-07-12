@@ -1,0 +1,87 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pageItem {
+  margin: 0 5px;
+  list-style: none;
+}
+
+.pageItem button {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: var(--darkGreen);
+  border: none;
+  border-radius: 5px;
+  color: var(--mintGreen);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.pageItem button:hover {
+  cursor: pointer;
+  background-color: var(--lightGreen);
+}
+
+.active button {
+  background-color: var(--mintGreen);
+  color: var(--black);
+}
+
+.active button:hover {
+  cursor: default;
+  background-color: var(--mintGreen);
+}
+
+.pageControl {
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.pageControl:hover {
+  cursor: pointer;
+}
+
+.pageControl:hover svg {
+  fill: var(--mintGreen);
+}
+
+.ellipsis {
+  color: var(--softMint);
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .pageItem button {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .pageControl svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pageItem button {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .pageControl svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}

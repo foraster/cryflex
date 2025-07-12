@@ -1,0 +1,32 @@
+:root {
+    --black: #070C11;
+    --darkGray: #1E2126;
+    --lightGray: #3C424A;
+    --softGray: #A1A8B3;
+    --softMint: #E9EFEC;
+    --mintGreen:#C4DAD2;
+    --lightGreen: #6A9C89;
+    --darkGreen: #16423C;
+    --darkRed: #8B2E2B;
+}
+
+.error_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.error_code{
+    margin-top: 20px;
+    color: var(--mintGreen);
+    font-size: 192px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error_message{
+    color: var(--softMint);
+    font-size: 38px;
+    font-family: 'Poppins', sans-serif;
+}

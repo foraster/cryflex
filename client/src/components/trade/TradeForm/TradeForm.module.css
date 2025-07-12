@@ -1,0 +1,45 @@
+.buttonContainer {
+  display: flex;
+  justify-content: left;
+  margin: 10px 0 0 20px;
+}
+
+.error{
+  margin-left: 25px;
+  color: var(--danger);
+  font-family: 'Inter';
+  font-size: 18px;
+
+}
+
+.selectAll {
+  padding: 5px 20px;
+  background: #16423C;
+  border: none;
+  border-radius: 40px;
+  font-size: 27;
+  color: #E9EFEC;
+}
+
+.groupWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.disabled button {
+  background-color: var(--lightGray);
+  cursor: not-allowed;
+}
+
+.top {
+  order: 0;
+}
+
+.middle {
+  order: 1;
+}
+
+.bottom {
+  order: 2;
+}

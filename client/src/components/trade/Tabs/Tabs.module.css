@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--darkGray) 50%, var(--black) 0);
+  border-radius: 15px;
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  color: var(--softMint);
+  border: none;
+  background-color: var(--darkGray);
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.buy {
+  border-radius: 15px 0 0 0;
+}
+
+.buy::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background-color: var(--darkGray);
+  transform: skewX(-15deg);
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.sell {
+  border-radius: 0 15px 0 0;
+  margin-left: 48px;
+}
+
+.sell::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background-color: var(--darkGray);
+  transform: skewX(15deg);
+  border-radius: 15px;
+  z-index: 2;
+}
+
+/* Active overrides */
+.active {
+  background-color: var(--black);
+}
+
+.buy.active::after {
+  background-color: var(--black);
+  transform: skewX(15deg);
+}
+
+.sell.active::before {
+  background-color: var(--black);
+  transform: skewX(-15deg);
+}
+
+@media (max-width: 1200px) {
+  .tab {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+}
+@media (max-width: 748px) {
+  .tab {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+  @media (max-width: 480px) {
+    .tab {
+    padding: 15px;
+    font-size: 12px;
+  }
+  }

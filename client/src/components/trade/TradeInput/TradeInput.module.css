@@ -1,0 +1,24 @@
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputField {
+  background: none;
+  border: none;
+  color: var(--softMint);
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+
+.inputField:focus {
+  outline: none !important;
+}
+.prefix{
+  position: absolute;
+  left: 10px; /* или right: 10px — если суффикс */
+  font-size: 0.9rem;
+  color: #888;
+  pointer-events: none; /* важно: чтобы не блокировать ввод */
+  z-index: 1;}

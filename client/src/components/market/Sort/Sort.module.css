@@ -1,0 +1,47 @@
+.sort {
+    padding: 10px 25px;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    flex-direction: row;
+    list-style: none;
+}
+
+.sort li {
+    margin-bottom: 10px;
+}
+
+.sort li button {
+    background: none;
+    border: none;
+    color: #F3F3F3;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.sort li button:hover {
+    cursor: pointer;
+    color: #A6A9AC;
+}
+
+@media (max-width: 1200px) {
+    .sort li button {
+        font-size: 16px;
+    }
+
+    .sort li {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sort li button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sort li button {
+        font-size: 12px;
+    }
+}

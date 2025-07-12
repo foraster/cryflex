@@ -1,0 +1,80 @@
+:root {
+  --black: #070C11;
+  --darkGray: #1E2126;
+  --lightGray: #3C424A;
+  --softGray: #A1A8B3;
+  --softMint: #E9EFEC;
+  --lightGreen: #6A9C89;
+  --darkGreen: #16423C;
+  --white: #FFFFFF;
+  --danger: #b83434;
+  --success: #308331;
+
+  --rate-up: rgb(49, 208, 49);
+  --rate-down: rgb(217, 58, 58);
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
+.gray {
+  color: var(--softGray);
+}
+
+.green {
+  color: var(--lightGreen);
+}
+
+.red,
+.error,
+.invalid {
+  color: var(--danger)!important;
+}
+
+.valid {
+  color: var(--success);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.success {
+  color: var(--success);
+}
+
+.rate-up {
+  color: var(--rate-up);
+}
+.rate-down {
+  color: var(--rate-down);
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+ max-width: 1800px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.link {
+  color: var(--darkGreen);
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--lightGreen);
+}

@@ -1,0 +1,149 @@
+.group {
+  margin: 20px 15px 0;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid var(--darkGray);
+  border-radius: 15px;
+  position: relative;
+}
+
+.group:hover {
+  border-color: var(--darkGreen);
+}
+
+.group label {
+  margin-left: 4px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--softMint);
+}
+
+.inputWrapper {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  font-family: "Inter", sans-serif;
+  color: var(--softMint);
+  font-size: 24px;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.selectControl {
+  cursor: pointer;
+  margin: auto 0;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.dropdown {
+  padding: 10px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--black);
+  border: 2px solid var(--darkGray);
+  border-radius: 15px;
+  margin-top: 5px;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.search {
+  margin: 10px;
+  display: flex;
+}
+
+.search input {
+  padding: 10px 0;
+  width: 100%;
+  border: 2px solid var(--lightGray);
+  border-radius: 10px;
+  background: none;
+  outline: none;
+  font-size: 21px;
+  text-indent: 10px;
+  color: var(--softMint);
+}
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.options::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--darkGray);
+  border-radius: 15px;
+  border: 2px solid var(--black);
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: var(--lightGray);
+  border-radius: 5px;
+}
+
+.option {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--darkGray);
+}
+
+.errorMessage {
+  color: var(--danger);
+  font-family: 'Inter';
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .group label {
+    font-size: 14px;
+  }
+  .inputField,
+  .select {
+    font-size: 21px;
+  }
+
+}
+@media (max-width: 768px) {
+  .inputWrapper {
+  padding: 0;
+  }
+  .group label {
+    font-size: 12px;
+  }
+  .inputField,
+  .select {
+    font-size: 18px;
+  }
+
+}
+@media (max-width: 480px) {
+  .group label {
+    font-size: 10px;
+  }
+  .inputField {
+    font-size: 16px;
+  }
+  .select {
+    font-size: 14px;
+  }
+}
