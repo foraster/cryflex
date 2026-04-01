@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.message{
+    margin-top: 20px;
+    color: var(--softMint);
+    font-size: 38px;
+    font-family: 'Poppins', sans-serif;
+}

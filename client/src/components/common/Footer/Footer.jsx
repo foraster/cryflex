@@ -5,10 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <nav className={styles.container} aria-label="Footer navigation">
-
-          <h2 className={styles.title}>CRYFLEX</h2>
-        
-
+        <h2 className={styles.title}>CRYFLEX</h2>
         <div className={styles.columns}>
           <div className={styles.column}>
             <h3 className={styles.columnTitle}>Follow Us</h3>

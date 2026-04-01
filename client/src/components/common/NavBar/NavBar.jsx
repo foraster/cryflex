@@ -4,7 +4,6 @@ import { observer } from "mobx-react-lite";
 
 import { ReactComponent as TradeIcon } from "../../../img/icons/trade icon.svg";
 import { ReactComponent as MarketIcon } from "../../../img/icons/market icon.svg";
-import { fromCents } from "../../../utils/helpers";
 import {
   LOGIN_ROUTE,
   MARKET_ROUTE,
@@ -16,7 +15,7 @@ import {
 import { Context } from "../../../index";
 import styles from "./NavBar.module.css";
 import BurgerButton from "./BurgerButton";
-import { fromPriceUnits, toFiat } from "../../../utils/money";
+import { toFiat } from "../../../utils/money";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);

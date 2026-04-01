@@ -7,6 +7,7 @@ export const LOGIN_ROUTE = '/login'
 export const REGISTRATION_ROUTE = '/registration'
 export const MARKET_ROUTE = '/market'
 export const TRADE_ROUTE = '/trade'
+export const COIN_INFO_ROUTE = '/market/info/:id';
 
 // money
 export const MAX_USD = 1000000;

@@ -6,7 +6,8 @@ import {
     PORTFOLIO_ROUTE,
     PROFILE_ROUTE,
     REGISTRATION_ROUTE,
-    TRADE_ROUTE
+    TRADE_ROUTE,
+    COIN_INFO_ROUTE,
 } from "./utils/consts";
 import Home from "./pages/Home/Home";
 import Market from "./pages/Market/Market";
@@ -14,6 +15,7 @@ import Trade from "./pages/Trade/Trade";
 import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import CoinInfo from "./pages/CoinInfo/CoinInfo";
 
 export const authRoutes = [
     {
@@ -47,4 +49,8 @@ export const publicRoutes = [
         path: TRADE_ROUTE,
         Component: Trade
     },
+    {
+        path: COIN_INFO_ROUTE,
+        Component: CoinInfo
+    }
 ]
