@@ -11,6 +11,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { user } = require("pg");
 const { validatePassword } = require("../utils/helpers");
+const isProduction = process.env.NODE_ENV === "production";
 
 //Start value of money
 const balance_units = 100_000_000_000_0; 
@@ -103,8 +104,8 @@ class UserController {
     res.cookie("token", token, {
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "strict",
     });
     return res.json({ success: true });
   }
@@ -132,8 +133,8 @@ class UserController {
      res.cookie("token", token, {
       maxAge: 3 * 30 * 24 * 60 * 60 * 1000, // 3 months
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "strict",
     });
     return res.json({ success: true });
     } catch (e) {
@@ -287,8 +288,8 @@ class UserController {
   async logout(req, res) {
     res.clearCookie("token", {
       httpOnly: true,
-      sameSite: "strict",
-      secure: process.env.NODE_ENV === "production",
+      sameSite: isProduction ? "none" : "strict",
+      secure: isProduction,
     });
     return res.status(200).json({ message: "Logged out successfully" });
   }
