@@ -4,7 +4,7 @@ Cryflex is a minimal cryptocurrency exchange simulator built with React, Express
 
 The project focuses on backend consistency, basic trading logic, and a structured fullstack architecture.
 
----
+
 
 ## Tech Stack
 
@@ -12,7 +12,7 @@ The project focuses on backend consistency, basic trading logic, and a structure
 - **Backend:** Node.js, Express, Sequelize  
 - **Database:** PostgreSQL
 
----
+
 
 ## Key Features
 
@@ -22,7 +22,11 @@ The project focuses on backend consistency, basic trading logic, and a structure
 - Clean UI with responsive layout
 - Clear code structure (client/server separation)
 
----
+## Live Demo
+
+You can try the demo version here:  
+https://cryflex-client.onrender.com/
+
 
 ## Getting Started
 
