@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 
@@ -16,16 +16,20 @@ import { Context } from "../../../index";
 import styles from "./NavBar.module.css";
 import BurgerButton from "./BurgerButton";
 import { toFiat } from "../../../utils/money";
+import Menu from "../Menu/Menu";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
   const isAuth = user.isAuth;
 
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <header className={styles.navbar}>
+      {openMenu && <Menu openMenu={openMenu} setOpen={setOpenMenu} />}
       <div className={styles.navbarRow}>
         <div className={styles.navbarLeft}>
-          <NavLink to="/" className={styles.navbarTitle}>
+          <NavLink to="/" className={styles.navbarTitle} onClick={() => setOpenMenu(false)}>
             CRYFLEX
           </NavLink>
           <div className={styles.primaryLinks}>
@@ -69,7 +73,13 @@ const NavBar = observer(() => {
           )}
         </div>
 
-        <button className={styles.menuButton}>
+        <button 
+          className={styles.menuButton}
+          onClick={() => {
+            setOpenMenu(!openMenu)
+             console.log(openMenu)}
+            }
+        >
           {" "}
           <BurgerButton />
         </button>
